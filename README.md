@@ -1,2 +1,2 @@
-hazzik2.github.com
+hazzik.github.com
 ==================
