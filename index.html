@@ -39,12 +39,9 @@
 
 <ul>
 <li>LinkedIn.com: <a href="http://linkedin.com/in/hazzik">http://linkedin.com/in/hazzik</a></li>
-<li>moikrug.ru: <a href="http://hazzik.moikrug.ru/">http://hazzik.moikrug.ru</a></li>
 <li>StackOverflow.com: <a href="http://stackoverflow.com/users/259946/hazzik/">http://stackoverflow.com/users/259946/hazzik</a></li>
 <li>GitHub.com: <a href="http://github.com/hazzik">http://github.com/hazzik</a></li>
-<li>VK.com: <a href="http://vk.com/id647773">http://vk.com/id647773</a></li>
-<li>Facebook.com: <a href="http://facebook.com/hazzik">http://fb.com/hazzik</a></li>
-<li>Google+: <a href="http://www.google.com/profiles/hazzik">http://www.google.com/profiles/hazzik</a></li>
+<li>twitter.com: <a href="http://github.com/hazzik">http://twitter.com/hazzik</a></li>
 </ul>
         <p>My projects</p>
 
@@ -62,15 +59,25 @@
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+<!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=15061501&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/15061501/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:15061501,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
 (function (d, w, c) {
     (w[c] = w[c] || []).push(function() {
         try {
-            w.yaCounter15061501 = new Ya.Metrika({id:15061501, enableAll: true, webvisor:true});
-        } catch(e) {}
+            w.yaCounter15061501 = new Ya.Metrika({id:15061501,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
     });
-    
+
     var n = d.getElementsByTagName("script")[0],
         s = d.createElement("script"),
         f = function () { n.parentNode.insertBefore(s, n); };
@@ -79,7 +86,7 @@
     s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
 
     if (w.opera == "[object Opera]") {
-        d.addEventListener("DOMContentLoaded", f);
+        d.addEventListener("DOMContentLoaded", f, false);
     } else { f(); }
 })(document, window, "yandex_metrika_callbacks");
 </script>
