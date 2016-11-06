@@ -26,15 +26,15 @@
 	      <form class="form-horizontal">
 	        <div class="form-group">
 	          <label for="pen" class="control-label">✏</label>
-	          <input type="input" class="col-sm-10 form-control" id="pen" placeholder="Pen" value="Pen">
+	          <input type="input" class="col-sm-10 form-control" id="pen" placeholder="Pen">
 	        </div>
 	        <div class="form-group">
 	          <label for="apple" class="control-label">🍎</label>
-	          <input type="input" class="form-control" id="apple" placeholder="Apple" value="Apple">
+	          <input type="input" class="form-control" id="apple" placeholder="Apple">
 	        </div>
 	        <div class="form-group">
 	          <label for="pineapple" class="control-label">🍍</label>
-	          <input type="input" class="form-control" id="pineapple" placeholder="Pineapple" value="Pineapple">
+	          <input type="input" class="form-control" id="pineapple" placeholder="Pineapple">
 	        </div>
 	      </form>
       </div>
@@ -44,14 +44,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
+      function isNullOrEmpty(v) {
+        return v == null || v.length == 0;
+      }
       function capitalize(v) {
-        if (v==null || v.length==0) return '';
+        if (isNullOrEmpty(v)) return '';
         return v[0].toUpperCase() + v.substring(1);
       }
       function render(pen, apple, pineapple) {
-        pen = capitalize(pen||'pen');
-        apple = capitalize(apple||'apple');
-        pineapple = capitalize(pineapple||'pineapple');
+        pen = capitalize(isNullOrEmpty(pen)?'pen':pen);
+        apple = capitalize(isNullOrEmpty(apple)?'apple':apple);
+        pineapple = capitalize(isNullOrEmpty(pineapple)?'pineapple':pineapple);
         $('#lyrics').html( 
           '<p>'+pen[0]+pineapple[0]+apple[0]+pen[0]+'</p>'+
           '<p></p>'+
